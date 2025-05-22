@@ -1,8 +1,16 @@
+import AddTodo from "./components/AddTodo"
+import Dialog from "./components/Dialog"
+import PageTitle from "./components/PageTitle"
+import Todo from "./components/Todo"
+
 function App() {
   
   return (
     <>
-      <h2>To-Do</h2>
+      <PageTitle/>
+      <Todo/>
+      {/* <Dialog/> */}
+      <AddTodo/>
     </>
   )
 }

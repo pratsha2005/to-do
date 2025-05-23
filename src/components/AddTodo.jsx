@@ -9,7 +9,7 @@ function AddTodo() {
   return (
     <div>
         <button 
-        class="fixed bottom-10 right-10 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700"
+        class="fixed bottom-10 right-10 bg-[#023E8A] text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700"
         onClick={handler}
         >
             <h2>Add Todo</h2>

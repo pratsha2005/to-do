@@ -9,6 +9,7 @@ import Todo from './components/Todo.jsx'
 import Dialog from './components/Dialog.jsx'
 import Display from './components/Display.jsx'
 import { PersistGate } from 'redux-persist/integration/react'
+import Update from './components/Update.jsx'
 
 
 const router = createBrowserRouter(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
     <Route path='/' element = {<Layout/>}>
       <Route path='' element = {<Display/>}/>
       <Route path='add-todo' element = {<Dialog/>}/>
+      <Route path='update-todo/:todoId' element = {<Update/>} />
     </Route>
   )
 )

@@ -1,8 +1,8 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     todos: [{
-        id: nanoid(),
+        id: Date.now(),
         title: "Buy milk",
         task: "Buy 2 liters of milk",
         completed: false
@@ -15,7 +15,7 @@ const todoSlice = createSlice({
     reducers: {
         addTodo: (state, action) => {
             const todo = {
-                id: nanoid(),
+                id: Date.now(),
                 title: action.payload.title,
                 task: action.payload.task,
                 completed: false
@@ -26,7 +26,8 @@ const todoSlice = createSlice({
             state.todos = state.todos.filter((todo) => (todo.id != action.payload))
         },
         updateTodo: (state, action) => {
-
+            state.todos = state.todos.map((todo) => ((todo.id == action.payload.id)? (todo.task = action.payload.task): (todo))
+            )
         },
         toggleTodo: (state, action) => {
             state.todos.map((todo) => ((todo.id == action.payload) ? (todo.completed = !todo.completed) : (todo.completed = todo.completed)))

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../stateManagement/todoSlice';
-import { nanoid } from '@reduxjs/toolkit';
 import { useNavigate } from 'react-router-dom';
 function Dialog() {
   const dispatch = useDispatch()
@@ -16,7 +15,7 @@ function Dialog() {
     e.preventDefault();
     dispatch(addTodo(input));
     setInput({
-      id: nanoid(),
+      id: Date.now(),
       title: "",
       task: "",
       completed: false

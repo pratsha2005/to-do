@@ -32,7 +32,10 @@ function Update() {
         <h2 className="text-2xl font-semibold mb-4">Update Todo</h2>
         
         <form>
-        
+        <div className="mb-4">
+            <label className="block text-sm font-medium mb-1" for="Title">Title</label>
+            <input onChange={(e) => (setInput(prev => ({...prev, title: e.target.value})))} id="Title" type="text" className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your title"/>
+        </div>
         <div className="mb-4">
             <label className="block text-sm font-medium mb-1" for="password">Description</label>
             <input onChange={(e) => (setInput(prev => ({...prev, task: e.target.value})))} id="password" type="text" className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your task"/>

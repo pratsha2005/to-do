@@ -2,7 +2,7 @@
 
 A modern, responsive todo application built with React, Redux Toolkit, and Tailwind CSS. Features a clean interface with persistent data storage and full CRUD operations.
 
-![Todo App Preview]("public\ss.png")
+![Todo App Preview]("https://to-do-kohl-delta.vercel.app/")
 
 ## 🚀 Features
 
